@@ -6,8 +6,6 @@ function ProductDetail() {
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    // Aquí deberías hacer una solicitud a tu API o cargar detalles del producto según el itemId (id)
-    // Ejemplo de solicitud ficticia a una API:
     fetch(`/api/product/${id}`)
       .then((response) => response.json())
       .then((data) => setProduct(data))
