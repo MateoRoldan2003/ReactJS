@@ -9,13 +9,13 @@ function Catalog() {
     fetch(`/api/products?category=${id}`)
       .then((response) => response.json())
       .then((data) => setProducts(data))
-      .catch((error) => console.error('Error fetching data:', error));
+      .catch((error) => console.error('Error al obtener datos:', error));
   }, [id]);
 
   return (
     <div>
-      <h1>Catalog</h1>
-      <h2>Category: {id}</h2>
+      <h1>Catalogo</h1>
+      <h2>Categoría: {id}</h2>
       <ul>
         {products.map((product) => (
           <li key={product.id}>
