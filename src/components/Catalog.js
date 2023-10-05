@@ -6,8 +6,6 @@ function Catalog() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    // Aquí deberías hacer una solicitud a tu API o cargar datos según el categoryId (id)
-    // Ejemplo de solicitud ficticia a una API:
     fetch(`/api/products?category=${id}`)
       .then((response) => response.json())
       .then((data) => setProducts(data))
