@@ -9,7 +9,7 @@ function App() {
     <Router>
       <div>
         <Navbar />
-        <Routes> {/* Cambia a "Routes" */}
+        <Routes> {}
           <Route path="/" element={<Catalog />} />
           <Route path="/category/:id" element={<Catalog />} />
           <Route path="/item/:id" element={<ProductDetail />} />
