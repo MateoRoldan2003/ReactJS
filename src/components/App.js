@@ -1,23 +1,22 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Importa "Routes" en lugar de "Route"
-import Navbar from './NavBnpm ar';
-import Catalog from './Catalog';
-import ProductDetail from './ProductDetail';
+import React, { useState } from 'react';
+import ProductList from './ProductList';
+import Checkout from './Checkout';
 
-function App() {
+const App = () => {
+  const [cart, setCart] = useState([]);
+
+  const addToCart = (product) => {
+    setCart((prevCart) => [...prevCart, product]);
+  };
+
   return (
-    <Router>
-      <div>
-        <Navbar />
-        <Routes> {/* Cambia a "Routes" */}
-          <Route path="/" element={<Catalog />} />
-          <Route path="/category/:id" element={<Catalog />} />
-          <Route path="/item/:id" element={<ProductDetail />} />
-        </Routes>
-      </div>
-    </Router>
+    <div>
+      <h1>Tienda</h1>
+      <ProductList addToCart={addToCart} />
+      <Checkout cart={cart} />
+    </div>
   );
-}
+};
 
 export default App;
 
