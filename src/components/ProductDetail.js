@@ -18,11 +18,7 @@ function ProductDetail() {
 
   return (
     <div>
-<<<<<<< HEAD
-      <h1>Detalle del producto</h1>
-=======
       <h1>Producto</h1>
->>>>>>> 30bd373543439f6aff0d1f9609e86b8200014439
       <h2>{product.name}</h2>
       <p>Descripcion: {product.description}</p>
       <p>Precio: {product.price}</p>
@@ -31,4 +27,3 @@ function ProductDetail() {
 }
 
 export default ProductDetail;
-

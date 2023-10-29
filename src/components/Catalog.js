@@ -9,7 +9,7 @@ function Catalog() {
     fetch(`/api/products?category=${id}`)
       .then((response) => response.json())
       .then((data) => setProducts(data))
-      .catch((error) => console.error('Error fetching data:', error));
+      .catch((error) => console.error('Error al obtener datos:', error));
   }, [id]);
 
   return (
